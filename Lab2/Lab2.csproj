@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F9B4155-45B5-4DD2-B85F-08929CE290D2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Lab2</RootNamespace>
+    <AssemblyName>Lab2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DbContext.cs" />
+    <Compile Include="Data\Repository\GameRepository.cs" />
+    <Compile Include="Data\Repository\IGameRepository.cs" />
+    <Compile Include="Data\Repository\IPlayerRepository.cs" />
+    <Compile Include="Data\Repository\PlayerRepository.cs" />
+    <Compile Include="Data\Service\GameService.cs" />
+    <Compile Include="Data\Service\IGameService.cs" />
+    <Compile Include="Data\Service\IPlayerService.cs" />
+    <Compile Include="Data\Service\PlayerService.cs" />
+    <Compile Include="GameOutcome.cs" />
+    <Compile Include="MyAccounts\Account.cs" />
+    <Compile Include="MyAccounts\PlayerHistory.cs" />
+    <Compile Include="MyAccounts\PremiumAccount.cs" />
+    <Compile Include="MyAccounts\PremiumMiddleAccount.cs" />
+    <Compile Include="MyGames\ClassicGame.cs" />
+    <Compile Include="MyGames\FabricGame.cs" />
+    <Compile Include="MyGames\Game.cs" />
+    <Compile Include="MyGames\GameForOne.cs" />
+    <Compile Include="MyGames\GameHistory.cs" />
+    <Compile Include="MyGames\TrainingGame.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
